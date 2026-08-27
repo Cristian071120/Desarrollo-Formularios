@@ -34,6 +34,7 @@
             btnUpdate = new Button();
             btnInsert = new Button();
             label1 = new Label();
+            btnClear = new Button();
             SuspendLayout();
             // 
             // btnFind
@@ -100,6 +101,20 @@
             label1.TabIndex = 28;
             label1.Text = "CATEGORÍAS";
             // 
+            // btnClear
+            // 
+            btnClear.BackColor = SystemColors.Highlight;
+            btnClear.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClear.ForeColor = Color.White;
+            btnClear.Location = new Point(350, 391);
+            btnClear.Margin = new Padding(3, 4, 3, 4);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(86, 31);
+            btnClear.TabIndex = 49;
+            btnClear.Text = "Salir";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
+            // 
             // FrmCategorias
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -107,6 +122,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnClear);
             Controls.Add(label1);
             Controls.Add(btnFind);
             Controls.Add(btnDelete);
@@ -125,5 +141,6 @@
         private Button btnUpdate;
         private Button btnInsert;
         private Label label1;
+        private Button btnClear;
     }
 }
