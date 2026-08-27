@@ -55,9 +55,9 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(426, 104);
             label2.Name = "label2";
-            label2.Size = new Size(120, 20);
+            label2.Size = new Size(51, 20);
             label2.TabIndex = 44;
-            label2.Text = "ORDENAR POR:";
+            label2.Text = "Filtrar";
             // 
             // label1
             // 
@@ -90,9 +90,9 @@
             lblLastName.ForeColor = Color.White;
             lblLastName.Location = new Point(32, 222);
             lblLastName.Name = "lblLastName";
-            lblLastName.Size = new Size(85, 20);
+            lblLastName.Size = new Size(74, 20);
             lblLastName.TabIndex = 38;
-            lblLastName.Text = "FECHA FIN";
+            lblLastName.Text = "Fecha Fin";
             // 
             // lblFirstName
             // 
@@ -102,9 +102,9 @@
             lblFirstName.ForeColor = Color.White;
             lblFirstName.Location = new Point(13, 161);
             lblFirstName.Name = "lblFirstName";
-            lblFirstName.Size = new Size(107, 20);
+            lblFirstName.Size = new Size(91, 20);
             lblFirstName.TabIndex = 37;
-            lblFirstName.Text = "FECHA INICIO";
+            lblFirstName.Text = "Fecha Inicio";
             // 
             // lblProductoId
             // 
@@ -114,9 +114,9 @@
             lblProductoId.ForeColor = Color.White;
             lblProductoId.Location = new Point(40, 104);
             lblProductoId.Name = "lblProductoId";
-            lblProductoId.Size = new Size(77, 20);
+            lblProductoId.Size = new Size(66, 20);
             lblProductoId.TabIndex = 36;
-            lblProductoId.Text = "INFORME";
+            lblProductoId.Text = "Informe";
             // 
             // btnClear
             // 
