@@ -37,7 +37,6 @@
             lblLastName = new Label();
             lblFirstName = new Label();
             lblProductoId = new Label();
-            btnAll = new Button();
             btnClear = new Button();
             btnFind = new Button();
             btnDelete = new Button();
@@ -45,6 +44,7 @@
             btnInsert = new Button();
             textBox1 = new TextBox();
             label2 = new Label();
+            btnAll = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvPersons).BeginInit();
             SuspendLayout();
             // 
@@ -64,35 +64,35 @@
             // 
             dgvPersons.BackgroundColor = SystemColors.MenuHighlight;
             dgvPersons.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPersons.Location = new Point(45, 323);
+            dgvPersons.Location = new Point(417, 102);
             dgvPersons.Margin = new Padding(3, 4, 3, 4);
             dgvPersons.Name = "dgvPersons";
             dgvPersons.RowHeadersWidth = 51;
-            dgvPersons.Size = new Size(704, 114);
+            dgvPersons.Size = new Size(386, 193);
             dgvPersons.TabIndex = 26;
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(203, 197);
+            txtLastName.Location = new Point(115, 217);
             txtLastName.Margin = new Padding(3, 4, 3, 4);
             txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(449, 27);
+            txtLastName.Size = new Size(258, 27);
             txtLastName.TabIndex = 25;
             // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(203, 136);
+            txtFirstName.Location = new Point(115, 156);
             txtFirstName.Margin = new Padding(3, 4, 3, 4);
             txtFirstName.Name = "txtFirstName";
-            txtFirstName.Size = new Size(449, 27);
+            txtFirstName.Size = new Size(258, 27);
             txtFirstName.TabIndex = 24;
             // 
             // txtPersonId
             // 
-            txtPersonId.Location = new Point(200, 79);
+            txtPersonId.Location = new Point(112, 99);
             txtPersonId.Margin = new Padding(3, 4, 3, 4);
             txtPersonId.Name = "txtPersonId";
-            txtPersonId.Size = new Size(452, 27);
+            txtPersonId.Size = new Size(261, 27);
             txtPersonId.TabIndex = 23;
             // 
             // lblLastName
@@ -101,7 +101,7 @@
             lblLastName.BackColor = Color.Transparent;
             lblLastName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLastName.ForeColor = Color.White;
-            lblLastName.Location = new Point(114, 197);
+            lblLastName.Location = new Point(26, 217);
             lblLastName.Name = "lblLastName";
             lblLastName.Size = new Size(52, 20);
             lblLastName.TabIndex = 22;
@@ -113,7 +113,7 @@
             lblFirstName.BackColor = Color.Transparent;
             lblFirstName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblFirstName.ForeColor = Color.White;
-            lblFirstName.Location = new Point(112, 139);
+            lblFirstName.Location = new Point(24, 159);
             lblFirstName.Name = "lblFirstName";
             lblFirstName.Size = new Size(67, 20);
             lblFirstName.TabIndex = 21;
@@ -125,31 +125,18 @@
             lblProductoId.BackColor = Color.Transparent;
             lblProductoId.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblProductoId.ForeColor = Color.White;
-            lblProductoId.Location = new Point(107, 82);
+            lblProductoId.Location = new Point(19, 102);
             lblProductoId.Name = "lblProductoId";
             lblProductoId.Size = new Size(87, 20);
             lblProductoId.TabIndex = 20;
             lblProductoId.Text = "ProductoId";
-            // 
-            // btnAll
-            // 
-            btnAll.BackColor = SystemColors.Highlight;
-            btnAll.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAll.ForeColor = Color.White;
-            btnAll.Location = new Point(738, 481);
-            btnAll.Margin = new Padding(3, 4, 3, 4);
-            btnAll.Name = "btnAll";
-            btnAll.Size = new Size(86, 31);
-            btnAll.TabIndex = 19;
-            btnAll.Text = "All";
-            btnAll.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
             btnClear.BackColor = SystemColors.Highlight;
             btnClear.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnClear.ForeColor = Color.White;
-            btnClear.Location = new Point(593, 481);
+            btnClear.Location = new Point(572, 395);
             btnClear.Margin = new Padding(3, 4, 3, 4);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(86, 31);
@@ -162,7 +149,7 @@
             btnFind.BackColor = SystemColors.Highlight;
             btnFind.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnFind.ForeColor = Color.White;
-            btnFind.Location = new Point(450, 481);
+            btnFind.Location = new Point(437, 395);
             btnFind.Margin = new Padding(3, 4, 3, 4);
             btnFind.Name = "btnFind";
             btnFind.Size = new Size(86, 31);
@@ -175,7 +162,7 @@
             btnDelete.BackColor = SystemColors.Highlight;
             btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(301, 481);
+            btnDelete.Location = new Point(305, 395);
             btnDelete.Margin = new Padding(3, 4, 3, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(86, 31);
@@ -188,7 +175,7 @@
             btnUpdate.BackColor = SystemColors.Highlight;
             btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(149, 481);
+            btnUpdate.Location = new Point(175, 395);
             btnUpdate.Margin = new Padding(3, 4, 3, 4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(86, 31);
@@ -201,7 +188,7 @@
             btnInsert.BackColor = SystemColors.Highlight;
             btnInsert.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.ForeColor = Color.White;
-            btnInsert.Location = new Point(7, 481);
+            btnInsert.Location = new Point(42, 395);
             btnInsert.Margin = new Padding(3, 4, 3, 4);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(86, 31);
@@ -211,10 +198,10 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(203, 252);
+            textBox1.Location = new Point(115, 272);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(449, 27);
+            textBox1.Size = new Size(258, 27);
             textBox1.TabIndex = 29;
             // 
             // label2
@@ -223,11 +210,24 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(114, 252);
+            label2.Location = new Point(26, 272);
             label2.Name = "label2";
             label2.Size = new Size(71, 20);
             label2.TabIndex = 28;
             label2.Text = "Cantidad";
+            // 
+            // btnAll
+            // 
+            btnAll.BackColor = SystemColors.Highlight;
+            btnAll.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAll.ForeColor = Color.White;
+            btnAll.Location = new Point(705, 395);
+            btnAll.Margin = new Padding(3, 4, 3, 4);
+            btnAll.Name = "btnAll";
+            btnAll.Size = new Size(86, 31);
+            btnAll.TabIndex = 19;
+            btnAll.Text = "ALL";
+            btnAll.UseVisualStyleBackColor = false;
             // 
             // FrmProductos
             // 
@@ -268,7 +268,6 @@
         private Label lblLastName;
         private Label lblFirstName;
         private Label lblProductoId;
-        private Button btnAll;
         private Button btnClear;
         private Button btnFind;
         private Button btnDelete;
@@ -276,5 +275,6 @@
         private Button btnInsert;
         private TextBox textBox1;
         private Label label2;
+        private Button btnAll;
     }
 }

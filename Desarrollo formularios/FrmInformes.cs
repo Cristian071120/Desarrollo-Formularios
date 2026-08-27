@@ -14,5 +14,7 @@ namespace Desarrollo_formularios
         {
             InitializeComponent();
         }
+
+       
     }
 }
