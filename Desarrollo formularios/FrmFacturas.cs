@@ -14,5 +14,10 @@ namespace Desarrollo_formularios
         {
             InitializeComponent();
         }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
