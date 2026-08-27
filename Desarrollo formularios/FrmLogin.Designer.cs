@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             btnIngresar = new Button();
             lblUsuario = new Label();
             lblContrasena = new Label();
@@ -37,57 +38,73 @@
             // 
             // btnIngresar
             // 
-            btnIngresar.Location = new Point(367, 247);
+            btnIngresar.BackColor = SystemColors.Highlight;
+            btnIngresar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnIngresar.ForeColor = Color.White;
+            btnIngresar.Location = new Point(223, 301);
+            btnIngresar.Margin = new Padding(3, 4, 3, 4);
             btnIngresar.Name = "btnIngresar";
-            btnIngresar.Size = new Size(75, 23);
+            btnIngresar.Size = new Size(86, 33);
             btnIngresar.TabIndex = 0;
             btnIngresar.Text = "Ingresar";
-            btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.UseVisualStyleBackColor = false;
             btnIngresar.Click += btnIngresar_Click;
             // 
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
-            lblUsuario.Location = new Point(223, 151);
+            lblUsuario.BackColor = Color.Transparent;
+            lblUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsuario.ForeColor = Color.White;
+            lblUsuario.ImageAlign = ContentAlignment.BottomLeft;
+            lblUsuario.Location = new Point(59, 173);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(47, 15);
+            lblUsuario.Size = new Size(63, 20);
             lblUsuario.TabIndex = 1;
             lblUsuario.Text = "Usuario";
             // 
             // lblContrasena
             // 
             lblContrasena.AutoSize = true;
-            lblContrasena.Location = new Point(223, 191);
+            lblContrasena.BackColor = Color.Transparent;
+            lblContrasena.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblContrasena.ForeColor = Color.White;
+            lblContrasena.Location = new Point(59, 227);
             lblContrasena.Name = "lblContrasena";
-            lblContrasena.Size = new Size(67, 15);
+            lblContrasena.Size = new Size(88, 20);
             lblContrasena.TabIndex = 2;
             lblContrasena.Text = "Contraseña";
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(306, 148);
+            txtUsuario.Location = new Point(154, 169);
+            txtUsuario.Margin = new Padding(3, 4, 3, 4);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(257, 23);
+            txtUsuario.Size = new Size(293, 27);
             txtUsuario.TabIndex = 3;
             // 
             // txtContrasena
             // 
-            txtContrasena.Location = new Point(306, 188);
+            txtContrasena.Location = new Point(154, 223);
+            txtContrasena.Margin = new Padding(3, 4, 3, 4);
             txtContrasena.Name = "txtContrasena";
-            txtContrasena.Size = new Size(257, 23);
+            txtContrasena.Size = new Size(293, 27);
             txtContrasena.TabIndex = 4;
             // 
             // FrmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(914, 600);
             Controls.Add(txtContrasena);
             Controls.Add(txtUsuario);
             Controls.Add(lblContrasena);
             Controls.Add(lblUsuario);
             Controls.Add(btnIngresar);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmLogin";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
