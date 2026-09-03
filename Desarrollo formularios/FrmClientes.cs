@@ -18,11 +18,11 @@ namespace Desarrollo_formularios
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            int PersonID;
+            
 
             string LastName, FirstName;
 
-            PersonID = Convert.ToInt32(txtPersonId.Text);
+            
             LastName = txtLastName.Text;
             FirstName = txtFirstName.Text;
 
@@ -35,8 +35,8 @@ namespace Desarrollo_formularios
                 connection = new SqlConnection(connectionString);
                 connection.Open();
 
-                SqlCommand cmd = new SqlCommand("insert into Persons(PersonID, LastName, FirstName) VALUES(@PersonID, @LastName, @FirstName)", connection);
-                cmd.Parameters.AddWithValue("@PersonID", PersonID);
+                SqlCommand cmd = new SqlCommand("insert into Persons(LastName, FirstName) VALUES(@LastName, @FirstName)", connection);
+               
                 cmd.Parameters.AddWithValue("@LastName", LastName);
                 cmd.Parameters.AddWithValue("@FirstName", FirstName);
 
