@@ -35,25 +35,24 @@
             lblUsuario = new Label();
             btnActualizar = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
-            label2 = new Label();
             btnSalir = new Button();
             btnInsert = new Button();
             btnDelete = new Button();
             dgvUsuarios = new DataGridView();
+            btnAll = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             SuspendLayout();
             // 
             // txtContrasena
             // 
-            txtContrasena.Location = new Point(156, 142);
+            txtContrasena.Location = new Point(133, 158);
             txtContrasena.Name = "txtContrasena";
             txtContrasena.Size = new Size(257, 23);
             txtContrasena.TabIndex = 9;
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(156, 102);
+            txtUsuario.Location = new Point(133, 118);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(257, 23);
             txtUsuario.TabIndex = 8;
@@ -64,7 +63,7 @@
             lblContrasena.BackColor = Color.Transparent;
             lblContrasena.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblContrasena.ForeColor = Color.White;
-            lblContrasena.Location = new Point(73, 145);
+            lblContrasena.Location = new Point(50, 161);
             lblContrasena.Name = "lblContrasena";
             lblContrasena.Size = new Size(69, 15);
             lblContrasena.TabIndex = 7;
@@ -77,7 +76,7 @@
             lblUsuario.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUsuario.ForeColor = Color.White;
             lblUsuario.ImageAlign = ContentAlignment.BottomLeft;
-            lblUsuario.Location = new Point(95, 104);
+            lblUsuario.Location = new Point(72, 120);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(49, 15);
             lblUsuario.TabIndex = 6;
@@ -88,12 +87,13 @@
             btnActualizar.BackColor = SystemColors.Highlight;
             btnActualizar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnActualizar.ForeColor = Color.White;
-            btnActualizar.Location = new Point(363, 256);
+            btnActualizar.Location = new Point(297, 257);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(93, 25);
             btnActualizar.TabIndex = 5;
             btnActualizar.Text = "Actualizar";
             btnActualizar.UseVisualStyleBackColor = false;
+            btnActualizar.Click += btnActualizar_Click;
             // 
             // label1
             // 
@@ -107,43 +107,25 @@
             label1.TabIndex = 44;
             label1.Text = "ADMINISTRACIÓN USUARIOS";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(156, 180);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(257, 23);
-            textBox1.TabIndex = 46;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(30, 185);
-            label2.Name = "label2";
-            label2.Size = new Size(108, 15);
-            label2.TabIndex = 45;
-            label2.Text = "Nueva Contraseña";
-            // 
             // btnSalir
             // 
             btnSalir.BackColor = SystemColors.Highlight;
             btnSalir.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSalir.ForeColor = Color.White;
-            btnSalir.Location = new Point(482, 256);
+            btnSalir.Location = new Point(514, 255);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(75, 25);
             btnSalir.TabIndex = 47;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // btnInsert
             // 
             btnInsert.BackColor = SystemColors.Highlight;
             btnInsert.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInsert.ForeColor = Color.White;
-            btnInsert.Location = new Point(170, 258);
+            btnInsert.Location = new Point(95, 258);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(75, 23);
             btnInsert.TabIndex = 48;
@@ -156,7 +138,7 @@
             btnDelete.BackColor = SystemColors.Highlight;
             btnDelete.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Location = new Point(263, 258);
+            btnDelete.Location = new Point(195, 258);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 49;
@@ -168,11 +150,24 @@
             // 
             dgvUsuarios.BackgroundColor = SystemColors.MenuHighlight;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUsuarios.Location = new Point(467, 102);
+            dgvUsuarios.Location = new Point(417, 102);
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.RowHeadersWidth = 51;
-            dgvUsuarios.Size = new Size(186, 101);
+            dgvUsuarios.Size = new Size(236, 101);
             dgvUsuarios.TabIndex = 50;
+            // 
+            // btnAll
+            // 
+            btnAll.BackColor = SystemColors.Highlight;
+            btnAll.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAll.ForeColor = Color.White;
+            btnAll.Location = new Point(417, 257);
+            btnAll.Name = "btnAll";
+            btnAll.Size = new Size(75, 23);
+            btnAll.TabIndex = 51;
+            btnAll.Text = "All";
+            btnAll.UseVisualStyleBackColor = false;
+            btnAll.Click += btnAll_Click;
             // 
             // FrmSeguridad
             // 
@@ -181,12 +176,11 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(700, 338);
+            Controls.Add(btnAll);
             Controls.Add(dgvUsuarios);
             Controls.Add(btnDelete);
             Controls.Add(btnInsert);
             Controls.Add(btnSalir);
-            Controls.Add(textBox1);
-            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtContrasena);
             Controls.Add(txtUsuario);
@@ -209,11 +203,10 @@
         private Label lblUsuario;
         private Button btnActualizar;
         private Label label1;
-        private TextBox textBox1;
-        private Label label2;
         private Button btnSalir;
         private Button btnInsert;
         private Button btnDelete;
         private DataGridView dgvUsuarios;
+        private Button btnAll;
     }
 }

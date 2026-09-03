@@ -91,6 +91,75 @@ namespace Desarrollo_formularios
             }
 
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            string Usuario, Contraseña;
+
+            Usuario = txtUsuario.Text;
+            Contraseña = txtContrasena.Text;
+
+            string connectionString = "Data Source= B6-501-23;Initial Catalog=MiBaseDatos;Integrated Security=True;Encrypt=False;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "UPDATE Usuarios SET Usuario = @Usuario, Contraseña = @Contraseña WHERE Usuario = @Usuario";
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Usuario", Usuario);
+                        cmd.Parameters.AddWithValue("@Contraseña", Contraseña);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Datos actualizados correctamente.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se encontró el registro para actualizar.");
+                        }
+                    }
+                }
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error al actualizar datos: " + ex.Message);
+            }
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=B6-501-23;Initial Catalog=MiBaseDatos;Integrated Security=True;Encrypt=False;";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Usuarios";
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
+                    {
+                        DataTable resultadoTable = new DataTable();
+                        adapter.Fill(resultadoTable);
+                        dgvUsuarios.DataSource = resultadoTable;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error al buscar datos: " + ex.Message);
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
+
 
